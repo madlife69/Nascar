@@ -3,6 +3,7 @@ package tn.esprit.nascar
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import androidx.appcompat.app.AlertDialog
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -61,6 +62,27 @@ setSupportActionBar(binding.toolbar)
 
     //TODO 13 Override the method onOptionsItemSelected() and Implement info and logout behavior
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId)
+        {
+            R.id.action_info->{
+                val aboutfragment = AboutFragment()
+                changeFragment(aboutfragment,"aboutfragment")
+
+            }
+            R.id.action_more->{
+                val alertDialogBuilder = AlertDialog.Builder(this)
+                alertDialogBuilder.setTitle("Logout")
+                alertDialogBuilder.setMessage("Are you sure you want to log out ?")
+                alertDialogBuilder.setPositiveButton("Oui") { dialog, _ ->
+                    dialog.dismiss()
+                }
+                alertDialogBuilder.setNegativeButton("Non") { dialog, _ ->
+                    dialog.dismiss()
+                }
+                val alertDialog = alertDialogBuilder.create()
+                alertDialog.show()
+            }
+        }
         return super.onOptionsItemSelected(item)
     }
 

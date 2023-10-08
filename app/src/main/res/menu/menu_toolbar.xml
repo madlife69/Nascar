@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+        <item
+            android:id="@+id/action_dehaze"
+            android:icon="@drawable/ic_dehaze"
+            android:title="dehaze"
+            app:showAsAction="always"/>
+       <item
+            android:id="@+id/action_more"
+            android:icon="@drawable/baseline_more_vert_24"
+           android:title="more"
+            app:showAsAction="always"/>
+    <item
+        android:id="@+id/action_info"
+        android:icon="@drawable/ic_info"
+        android:title="more"
+        app:showAsAction="always"/>
+</menu>
+

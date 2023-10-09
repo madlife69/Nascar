@@ -21,6 +21,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         //TODO 11 Bind the toolbar to the activity
+        supportActionBar?.setTitle("Nascar")
+
 setSupportActionBar(binding.toolbar)
 
 
@@ -74,7 +76,7 @@ setSupportActionBar(binding.toolbar)
                 alertDialogBuilder.setTitle("Logout")
                 alertDialogBuilder.setMessage("Are you sure you want to log out ?")
                 alertDialogBuilder.setPositiveButton("Oui") { dialog, _ ->
-                    dialog.dismiss()
+                    finish()
                 }
                 alertDialogBuilder.setNegativeButton("Non") { dialog, _ ->
                     dialog.dismiss()

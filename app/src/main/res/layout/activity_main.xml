@@ -8,18 +8,23 @@
 
     <!-- TODO 8 Include the toolbar_layout.xml here-->
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/AppBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/Base.Theme.Nascar"
+
         app:layout_constraintTop_toTopOf="parent">
 
         <!-- Include your Toolbar here -->
-        <androidx.appcompat.widget.Toolbar
+        <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            app:popupTheme="@style/Base.Theme.Nascar" />
+            app:title="Nascar"
+            app:titleTextColor="@color/white"
+            app:menu="@menu/menu_toolbar"
+            app:navigationIcon="@drawable/ic_dehaze"
+            />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -34,7 +39,8 @@
         android:weightSum="3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/AppBar"
+
         >
 
         <Button
@@ -81,7 +87,7 @@
         android:layout_margin="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/materialDivider"
         app:layout_constraintVertical_bias="0.0"

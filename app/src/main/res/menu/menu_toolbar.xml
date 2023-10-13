@@ -3,15 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainActivity">
 
-       <item
-            android:id="@+id/action_more"
-            android:icon="@drawable/baseline_more_vert_24"
-           android:title="more"
-            app:showAsAction="always"/>
     <item
-        android:id="@+id/action_info"
+        android:id="@+id/infoMenu"
         android:icon="@drawable/ic_info"
-        android:title="more"
-        app:showAsAction="always"/>
+        android:title="@string/info"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/logoutMenu"
+        android:icon="@drawable/ic_logout"
+        android:title="@string/logout"
+        app:showAsAction="never" />
 </menu>
 

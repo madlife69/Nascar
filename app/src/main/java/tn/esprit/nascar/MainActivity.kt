@@ -7,6 +7,8 @@ import androidx.appcompat.app.AlertDialog
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import tn.esprit.nascar.databinding.ActivityMainBinding
 
 
@@ -24,6 +26,9 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.setTitle("Nascar")
 
 setSupportActionBar(binding.toolbar)
+
+
+
 
 
 
@@ -66,12 +71,12 @@ setSupportActionBar(binding.toolbar)
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId)
         {
-            R.id.action_info->{
+            R.id.infoMenu->{
                 val aboutfragment = AboutFragment()
                 changeFragment(aboutfragment,"aboutfragment")
 
             }
-            R.id.action_more->{
+            R.id.logoutMenu->{
                 val alertDialogBuilder = AlertDialog.Builder(this)
                 alertDialogBuilder.setTitle("Logout")
                 alertDialogBuilder.setMessage("Are you sure you want to log out ?")
